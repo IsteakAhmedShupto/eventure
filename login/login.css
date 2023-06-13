@@ -1,0 +1,110 @@
+body {
+  font-weight: 500;
+}
+
+.login-container {
+  display: flex;
+  background-color: var(--white);
+  text-align: center;
+}
+
+.login-main,
+.login-image {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.login-main {
+  padding-top: 12rem;
+  position: relative;
+}
+
+.login-logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-weight: 700;
+}
+
+.login-header {
+  margin-bottom: 1rem;
+}
+
+.login-header > p {
+  margin: 0.5rem auto 0 auto;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="submit"] {
+  display: block;
+  border: 0;
+  background-color: var(--white);
+  padding: 1rem 1.2rem;
+  width: 80%;
+  margin: 0.5rem 0;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  border: 2px solid var(--gray-6);
+  border-radius: 5px;
+}
+
+::placeholder {
+  color: var(--gray-1);
+}
+
+.login-checkbox {
+  display: flex;
+  gap: 5px;
+  width: 80%;
+  margin: 1rem 0;
+}
+
+input[type="submit"] {
+  background-color: var(--black);
+  color: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="submit"]:active {
+  transform: scale(0.9);
+}
+
+.login-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration-link {
+  color: var(--gray-7);
+  padding-top: 4rem;
+}
+
+.registration-link > a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.login-image {
+  background: url("../images/login-bg.jpg");
+  background-size: cover;
+  background-position: center left;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 600px) {
+  .login-container {
+    flex-direction: column;
+  }
+  .login-image {
+    display: none;
+  }
+}
