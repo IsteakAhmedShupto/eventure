@@ -1,6 +1,6 @@
 body {
-  font-weight: 700;
-  max-width: 1600px;
+  max-width: 2000px;
   width: 100%;
   margin: 0 auto;
+  overflow-x: hidden;
 }

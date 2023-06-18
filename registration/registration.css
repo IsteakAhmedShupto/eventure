@@ -2,39 +2,39 @@ body {
   font-weight: 500;
 }
 
-.login-container {
+.reg-container {
   display: flex;
   background-color: var(--white);
   text-align: center;
 }
 
-.login-main,
-.login-image {
+.reg-main,
+.reg-image {
   width: 100%;
   min-height: 100vh;
 }
 
-.login-main {
+.reg-main {
   padding-top: 12rem;
   position: relative;
 }
 
-.login-logo {
+.reg-logo {
   position: absolute;
   top: 1rem;
   left: 1rem;
   font-weight: 700;
 }
 
-.login-logo > a {
+.reg-logo > a {
   text-decoration: none;
 }
 
-.login-header {
+.reg-header {
   margin-bottom: 1rem;
 }
 
-.login-header > p {
+.reg-header > p {
   margin: 0.5rem auto 0 auto;
 }
 
@@ -61,16 +61,11 @@ input[type="text"] {
   color: var(--gray-1);
 }
 
-.login-checkbox {
+.reg-checkbox {
   display: flex;
   gap: 5px;
   width: 80%;
   margin: 1rem 0;
-}
-
-.login-validation {
-  color: var(--red-1);
-  margin-bottom: 1rem;
 }
 
 input[type="submit"] {
@@ -85,35 +80,35 @@ input[type="submit"]:active {
   transform: scale(0.9);
 }
 
-.login-form-container {
+.reg-form-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.registration-link {
+.login-link {
   color: var(--gray-7);
   padding-top: 4rem;
 }
 
-.registration-link > a {
+.login-link > a {
   text-decoration: none;
   color: var(--black);
 }
 
-.login-image {
-  background: url("../images/login-bg.jpg");
+.reg-image {
+  background: url("../images/reg-page-image.jpg");
   background-size: cover;
-  background-position: center left;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 600px) {
-  .login-container {
+  .reg-container {
     flex-direction: column;
   }
-  .login-image {
+  .reg-image {
     display: none;
   }
 }

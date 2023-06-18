@@ -6,6 +6,10 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
 /* Lato font attachment link */
 
+/* Noto Sans font attachment link */
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+/* Noto Sans font attachment link */
+
 :root {
   --gray-1: #374151;
   --gray-2: #121111;
@@ -24,10 +28,10 @@
   --gray-15: #bcccdc;
   --gray-16: #dae2ec;
   --gray-17: #f1f5f8;
-  --blue-1: #60a5fa;
+  --blue-1: #1d4ed8;
   --blue-2: #3b82f6;
   --blue-3: #2563eb;
-  --blue-4: #1d4ed8;
+  --blue-4: #60a5fa;
   --blue-5: #1c5d99;
   --blue-6: #f0f8ff;
   --blue-7: #49a6e9;
@@ -55,6 +59,7 @@
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --merriweather-font: "Merriweather", sans-serif;
   --lato-font: "Lato", sans-serif;
+  --nato-sans: "Noto Sans", sans-serif;
 }
 
 * {
@@ -62,5 +67,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--lato-font);
+  font-family: var(--nato-sans);
   color: var(--gray-2);
 }

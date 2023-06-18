@@ -1,0 +1,81 @@
+body {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bg-form-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  min-height: 20vh;
+}
+
+.bg-image > p {
+  background-color: var(--blue-4);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.birthday-form,
+.concert-form,
+.wedding-form,
+.other-form {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.birthday-form > h3,
+.concert-form > h3,
+.wedding-form > h3,
+.other-form > h3 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--blue-4);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+  border: 1px solid var(--gray-4);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="submit"] {
+  margin: 0.5rem 0;
+  padding: 1rem 2rem;
+  width: 100%;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  background-color: var(--blue-4);
+  color: var(--white);
+  font-weight: 700;
+  border: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--blue-2);
+}

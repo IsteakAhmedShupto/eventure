@@ -1,0 +1,23 @@
+.nav-section {
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-section > ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-section > ul > li > a {
+  text-decoration: none;
+  color: var(--gray-4);
+}
+
+.nav-section > .nav-link > a {
+  text-decoration: none;
+  color: var(--blue-4);
+  font-weight: 700;
+}
