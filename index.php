@@ -54,7 +54,7 @@ setcookie("page_visit", $page_visit, time() + 3600 * 24 * 365);
       </p>
       <div class="links">
         <a href="./login/login.php">Login</a>
-        <a href="./registration/registration.html">Registration</a>
+        <a href="./registration/registration.php">Registration</a>
       </div>
     </div>
     <section class="home-container-images">
