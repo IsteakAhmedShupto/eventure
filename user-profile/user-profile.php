@@ -69,7 +69,7 @@ if (isset($_SESSION["user_id"])) {
             <p>You need to <a href="../login/login.php">Login</a>
                 to
                 access this page.</p>
-            <p><a href="../index.phpl">Return to home page.</a></p>
+            <p><a href="../index.php">Return to home page.</a></p>
         </section>
 
     <?php endif; ?>

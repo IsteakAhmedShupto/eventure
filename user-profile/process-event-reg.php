@@ -32,7 +32,31 @@
         if (empty($_POST["date"])) {
             echo "<p>Date name is required</p>";
             exit;
-        } ?>
+        }
+
+
+        $mysqli = include "../database-connection/database-connection.php";
+
+        $sql = "INSERT INTO events (firstName,lastName,event,email,date)
+        VALUES (?,?,?,?,?)";
+
+        $stmt = $mysqli->stmt_init();
+
+        if (!$stmt->prepare($sql)) {
+            echo "<p>Database error. Please try again after some time. </p>";
+        }
+
+
+        $stmt->bind_param("sssss", $_POST["firstName"], $_POST["lastName"], $_POST["event"], $_POST["email"], $_POST["date"]);
+
+        if ($stmt->execute()) {
+            header("Location: ./successful-reg.php");
+            exit;
+        } else {
+            echo "<p>Duplicate entry for date is not allowed.</p>";
+        }
+
+        ?>
     </section>
 
 </body>
@@ -41,23 +65,26 @@
 
 <?php
 
-$mysqli = include "../database-connection/database-connection.php";
 
-$sql = "INSERT INTO events (firstName,lastName,event,email,date)
-VALUES (?,?,?,?,?)";
+// original code later modified for html
 
-$stmt = $mysqli->stmt_init();
+// $mysqli = include "../database-connection/database-connection.php";
 
-if (!$stmt->prepare($sql)) {
-    die("SQL error: " . $mysqli->error);
-}
+// $sql = "INSERT INTO events (firstName,lastName,event,email,date)
+// VALUES (?,?,?,?,?)";
+
+// $stmt = $mysqli->stmt_init();
+
+// if (!$stmt->prepare($sql)) {
+//     die("SQL error: " . $mysqli->error);
+// }
 
 
-$stmt->bind_param("sssss", $_POST["firstName"], $_POST["lastName"], $_POST["event"], $_POST["email"], $_POST["date"]);
+// $stmt->bind_param("sssss", $_POST["firstName"], $_POST["lastName"], $_POST["event"], $_POST["email"], $_POST["date"]);
 
-if ($stmt->execute()) {
-    header("Location: ./successful-reg.php");
-    exit;
-} else {
-    die($mysqli->error . " " . $mysqli->errno);
-}
+// if ($stmt->execute()) {
+//     header("Location: ./successful-reg.php");
+//     exit;
+// } else {
+//     die($mysqli->error . " " . $mysqli->errno);
+// }
