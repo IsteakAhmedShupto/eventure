@@ -1,0 +1,18 @@
+.page-view {
+  min-height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-view > p {
+  margin-top: 2.5rem;
+  background-color: var(--blue-4);
+  color: var(--white);
+  padding: 0.3rem 1.2rem;
+  border-radius: 3px;
+}
+
+.page-view > p:hover {
+  background-color: var(--blue-2);
+}

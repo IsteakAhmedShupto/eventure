@@ -1,0 +1,18 @@
+.feedback-container {
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.feedback-line {
+  text-align: center;
+}
+
+.return-page {
+  text-decoration: none;
+  color: var(--blue-4);
+  font-weight: 700;
+}

@@ -1,0 +1,6 @@
+.process-signup-container > p {
+  text-align: center;
+  margin: 2rem 0;
+  color: var(--blue-4);
+  font-weight: 700;
+}

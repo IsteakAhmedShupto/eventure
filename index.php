@@ -1,3 +1,11 @@
+<?php
+if (!isset($_COOKIE["page_visit"]))
+  $_COOKIE["page_visit"] = 0;
+$page_visit = $_COOKIE["page_visit"] + 1;
+setcookie("page_visit", $page_visit, time() + 3600 * 24 * 365);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +19,7 @@
   <link rel="stylesheet" href="./root.css" />
   <link rel="stylesheet" href="./index.css" />
   <link rel="stylesheet" href="./header.css" />
+  <link rel="stylesheet" href="./page-view.css" />
   <link rel="stylesheet" href="./home.css" />
   <link rel="stylesheet" href="./about.css" />
   <link rel="stylesheet" href="./learnings.css" />
@@ -23,6 +32,18 @@
 
 <body>
   <?php include "./nav.php"; ?>
+
+
+  <div class="page-view">
+    <?php
+    if ($page_visit > 1) {
+      echo ("<p>Page visit number: $page_visit</p>");
+    } else {
+      echo ("<p>Page visit number: 0</p>");
+    }
+    ?>
+  </div>
+
 
   <section class="home-container" id="home">
     <div class="texts-links-container">
@@ -132,13 +153,13 @@
 
   <article class="contact-container">
     <h3>Contact Us</h3>
-    <form>
+    <form action="./process-contact/process-contact.php" method="POST" novalidate>
       <div class="name-container">
-        <input type="text" placeholder="First name" />
-        <input type="text" placeholder="Last name" />
+        <input type="text" placeholder="First name" name="firstName" />
+        <input type="text" placeholder="Last name" name="lastName" />
       </div>
-      <input type="email" placeholder="Email" />
-      <textarea placeholder="Enter your feedback here"></textarea>
+      <input type="email" placeholder="Email" name="email" />
+      <textarea placeholder="Enter your feedback here" name="feedback"></textarea>
       <input type="submit" value="Submit" />
     </form>
   </article>

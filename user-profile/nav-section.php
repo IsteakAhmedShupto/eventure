@@ -8,6 +8,8 @@
         <li><a href="./wedding.php">Wedding</a></li>
         <li><a href="./concert.php">Concert</a></li>
         <li><a href="./others.php">Others</a></li>
+        <li><a href="./reviews.php">Reviews</a></li>
+        <li><a href="./ques-ans.php">Q & A</a></li>
     </ul>
     <p class="nav-link"><a href="../logout/logout.php">Logout</a></p>
 </nav>

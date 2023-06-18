@@ -64,7 +64,7 @@
 .newsletter > .right > input[type="submit"] {
   padding: 1rem 1.5rem;
   border-radius: 5px;
-  border: 1px solid var(--gray-4);
+  border: 1px solid var(--gray-7);
 }
 
 .newsletter > .right > input[type="submit"] {
